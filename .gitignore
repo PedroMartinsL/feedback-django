@@ -1,17 +1,61 @@
-# Avoid accidental upload of the Sketch and Figma design files
-#####################################################
-## Please do not remove lines 5 and 6 - thanks! 🙂 ##
-#####################################################
-*.sketch
-*.fig
+# Arquivos e diretórios do ambiente virtual
+venv/
+*.env
+.env/
 
-# Avoid accidental XD upload if you convert the design file
-###############################################
-## Please do not remove line 12 - thanks! 🙂 ##
-###############################################
-*.xd
+# Arquivos de configuração de editor
+.idea/
+.vscode/
+*.swp
+*.swo
 
-# Avoid your project being littered with annoying .DS_Store files!
+# Arquivos de compilação Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Banco de dados local (SQLite)
+db.sqlite3
+
+# Arquivos de migração Django (caso queira ignorá-los, o que não é recomendado)
+# mas se preferir pode ignorá-los para evitar o versionamento desnecessário de migrações antigas.
+migrations/
+
+# Arquivos de configuração de logs
+*.log
+
+# Arquivos de configuração do sistema
 .DS_Store
-.prettierignore
-node_modules/
+Thumbs.db
+
+# Arquivos do Django que não devem ser versionados
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.bak
+
+# Arquivos de saída de ferramentas como Jupyter
+.ipynb_checkpoints/
+
+# Arquivos específicos de compilação do Django
+static/
+media/
+
+# Arquivos de segurança
+*.key
+*.pem
+
+# Pasta do Django que guarda arquivos de sessões
+sessions/
+
+# Armazenamento de dados temporários de testes
+*.db
+
+# Cache de templates do Django
+*.pyc
+*.pyo
+
+# Para evitar versionar arquivos sensíveis de configuração (como secrets.py)
+config/secrets.py

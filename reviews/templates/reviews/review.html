@@ -1,11 +1,11 @@
-{% load reviews/reviews.html %}
+{% extends 'reviews/base.html' %}
 
 {%block title%}
     <title>Your Review</title>
 {% endblock %}
 {% block content %}
 
-    <form>
+    <form method="POST">
         {% csrf_token %}
         {% for field in form %}
         <div class="form-control {% if field.errors %} errors {% endif %}">

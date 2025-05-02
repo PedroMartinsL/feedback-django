@@ -1,0 +1,10 @@
+{%extends "reviews/base.html"%}
+
+{% block title %}Review Details{% endblock %}
+
+{% block content %}
+    <p><strong>User Name:</strong> {{ review.user_name }}</p>
+    <p><strong>Rating:</strong> {{ review.rating }}</p>
+    <p><strong>Text:</strong> {{ review.review_Text}}</p>
+    <a href="{% url 'reviews:review_list' %}">Back to all reviews</a>
+{% endblock %}

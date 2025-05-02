@@ -13,7 +13,7 @@
     {% csrf_token %}
     {% comment %} enctype will carry a file to action {% endcomment %}
     {% csrf_token %}
-    <input type="file" name="image"/>
+    {{form}}
     <button>Upload!</button>
   </form>
 </body>

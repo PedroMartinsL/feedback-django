@@ -40,11 +40,8 @@ class ReviewsListView(ListView):
     def get_queryset(self):
         return super().get_queryset()
     
-class SingleReviewView(TemplateView):
+class SingleReviewView(DetailView):
     template_name = 'reviews/single_review.html'
+    model = Review
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        review_id = self.kwargs.get('review_id')
-        context['review'] = Review.objects.get(id=review_id)
-        return context
+    

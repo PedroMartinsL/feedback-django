@@ -3,27 +3,17 @@ from django.http import HttpResponseRedirect
 from django.views import View
 from django.views.generic.base import TemplateView
 from django.views.generic import ListView, DetailView
-from django.views.generic.edit import FormView
+from django.views.generic.edit import CreateView
 
 from .models import Review
 from .forms import ReviewForm
 
-class ReviewView(FormView):
-    form_class = ReviewForm # specify the form class to be used
+class ReviewView(CreateView):
+    model = Review
+    form_class = ReviewForm # specify the form to be used
     template_name = 'reviews/review.html' # specify the template to be used
     success_url = '/thank_you/' # URL to redirect to after successful form submission
-
-    def form_valid(self, form):
-        form.save()
-        return super().form_valid(form)
     
-
-    # def post(self, request):
-    #     form = ReviewForm(request.POST)
-    #     if form.is_valid():
-    #         form.save()
-    #         return HttpResponseRedirect('/thank_you/')
-    #     return render(request, 'reviews/review.html', {'form': form})
 
 def thank_you(request):
     return render( request, 'reviews/thank_you.html', {

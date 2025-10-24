@@ -40,7 +40,6 @@ Thumbs.db
 .ipynb_checkpoints/
 
 # Arquivos específicos de compilação do Django
-static/
 media/
 
 # Arquivos de segurança

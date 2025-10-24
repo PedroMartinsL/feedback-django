@@ -1,20 +1,29 @@
 {% extends 'reviews/base.html' %}
 
 {%block title%}
-    <title>Your Review</title>
+    Adicionar Review
 {% endblock %}
 {% block content %}
+<header>
+<h1>Bem-vindo ao nosso site!</h1>
+<p>Aqui você pode acessar perfis de usuários e conferir avaliações.</p>
 
-    <form method="POST">
-        {% csrf_token %}
-        {% for field in form %}
-        <div class="form-control {% if field.errors %} errors {% endif %}">
-            {{ field.label_tag }}
-            {{ field }}
-            {{ field.errors }}
-        </div>
-        {% endfor %}
-        
-        <button type="submit">Send</button>
-    <form/>
+<nav>
+    <a href="{% url 'profile' %}">Ver profiles</a>
+    <a href="{% url 'reviews_list' %}">Ver reviews</a>
+</nav>
+</header>
+
+<form method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="form-control {% if field.errors %} errors {% endif %}">
+        {{ field.label_tag }}
+        {{ field }}
+        {{ field.errors }}
+    </div>
+    {% endfor %}
+    
+    <button type="submit">Send</button>
+</form>
 {% endblock %}

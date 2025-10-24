@@ -1,0 +1,145 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #a7c4c8, #807a91);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Formulários */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #320777;
+    background-color: #f4eeff;
+}
+
+/* Botões */
+button {
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    background: #272232;
+    color: white;
+    border: none;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover,
+button:active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Links como botões */
+a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    background: #272232;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+}
+
+a:hover,
+a:active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    background: #272232;
+}
+
+/* Listas */
+ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    list-style: none;
+}
+
+/* Divs/cards gerais */
+div {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Imagens - redondas */
+img {
+    width: 100px;        
+    height: 100px;       
+    object-fit: cover;   
+    border-radius: 50%;  
+    display: block;
+    margin: 0 auto 10px;
+    border: 2px solid #8B61F4;
+}
+
+header {
+    text-align: center;       /* Centraliza o texto */
+    border: 2px solid #4CAF50; /* Borda verde */
+    border-radius: 10px;       /* Cantos arredondados */
+    padding: 20px;             /* Espaçamento interno */
+    margin-bottom: 20px;       /* Espaço abaixo do header */
+    background-color: #f0fff0; /* Fundo levemente colorido */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header h1 {
+    margin-bottom: 10px; /* Espaço entre título e parágrafo */
+}
+
+header p {
+    margin: 0;
+    font-size: 1.1rem;
+}

@@ -6,7 +6,16 @@
     <h1>All Reviews</h1>
     <ul>
         {% for review in object_list %}
-            <li>{{ review.user_name }} (Rating: {{ review.rating }})</li>
+            <li>
+                <a href="{% url 'single_review' review.id %}">
+                <strong>{{ review.user_name }}</strong> (Rating: {{ review.rating }})
+                <br>
+                {% if review.review_text %}
+                - {{ review.review_text }}
+                {% endif %}
+                <hr>
+                </a>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}

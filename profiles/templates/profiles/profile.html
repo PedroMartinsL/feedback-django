@@ -1,0 +1,23 @@
+{% extends 'reviews/base.html' %}
+
+{% block content %}
+  <div class="container">
+    <header>
+    <h1>Diga X</h1>
+    <p>Esta seção você envia fotos para contruir seu perfil.</p>
+    <br>
+    <a href="{% url 'list' %}">Listar perfis</a>
+    <a href="{% url 'profile' %}">Voltar</a>
+    </header>
+    {% if form %}
+      <h2>Criar Perfil</h2>
+      <form action="{% url 'profile' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Criar Perfil</button>
+      </form>
+    {% endif %}
+      <br>
+      {% block list %}{% endblock %}
+  </div>
+{% endblock %}

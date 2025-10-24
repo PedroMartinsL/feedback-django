@@ -1,0 +1,12 @@
+{% extends 'profiles/profile.html' %}
+
+{% block list %}
+<h2>Lista de Perfis</h2>
+    <ul>
+    {% for profile in profiles %}
+        <li><img src="{{ profile.image.url }}" class="profile-img" alt="{{ profile.name }}"></li>
+    {% empty %}
+        <li>Nenhum perfil encontrado</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
